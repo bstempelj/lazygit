@@ -29,6 +29,7 @@ defaults:
 jobs:
   check-and-release:
     runs-on: ubuntu-latest
+    if: github.repository == 'jesseduffield/lazygit'
     steps:
       - name: Check for correct repository
         if: ${{ github.event_name != 'workflow_dispatch' && github.repository != 'stefanhaller/lazygit' }}
